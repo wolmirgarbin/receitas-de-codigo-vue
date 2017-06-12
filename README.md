@@ -4,3 +4,5 @@ Exemplos de aplicativos single page com Vue.js de cursos que fiz e cursos que di
 Conheça:
 * [Receitas de código](http://receitasdecodigo.com.br)
 * [Canal do Youtube](https://www.youtube.com/channel/UC9XwbqDtIgEsAnYFDPZJuiA)
+
+> Importante: cada projeto contém os links dos tutoriais e cursos em que foram utilizados em seu Readme.md interno.
