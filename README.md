@@ -6,3 +6,20 @@ Conheça:
 * [Canal no Youtube do Receitas de Código](https://www.youtube.com/channel/UC9XwbqDtIgEsAnYFDPZJuiA)
 
 > Importante: cada projeto contém os links dos tutoriais e cursos em que foram utilizados em seu Readme.md interno.
+
+
+# Projetos
+
+Todos os projetos pertencem a um treinamento ou tutorial que voçê pode acessar:
+
+## Controle Clientes
+
+Projeto com vue single page contendo uma tela de login, um tela inicial, tela de listagem e tela de cadastro com vários componentes.
+
+## API
+
+Uma api simples utilizada para alguns exemplos
+
+## server 
+
+Servidor simples para node.js para rodar em produção aplicativos criados com vue.js
