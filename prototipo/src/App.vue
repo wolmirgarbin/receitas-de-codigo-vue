@@ -2,9 +2,7 @@
   <!-- HTML -->
   <div>
 
-    <nav class="navbar navbar-default">
-      <menu-app @logoutIn="logout" v-if="mostraMenu" />
-    </nav>
+    <menu-app @logoutIn="logout" v-if="mostraMenu" />
 
     <!-- é aqui que encontrará os componentes de página que queremos visualizar -->
     <router-view @acessouSistema="acessou"></router-view>

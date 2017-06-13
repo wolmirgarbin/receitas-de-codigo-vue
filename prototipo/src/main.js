@@ -11,6 +11,8 @@ import {routes} from './routes'; // como é um .js não precisa adicionar a exte
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 
+import 'keen-ui/dist/keen-ui.css';
+
 import './assets/css/my.css';
 import './assets/js/my.js';
 
@@ -20,7 +22,7 @@ Vue.use(VueRouter);
 
 const router = new VueRouter({
   routes, /* : routes - como eles tem o mesmo nome podemos manter apenas 1*/
-  mode: 'history' /* remove o # da barra de navegação */
+  //mode: 'history' /* remove o # da barra de navegação */
 });
 
 

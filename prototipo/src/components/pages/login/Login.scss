@@ -7,10 +7,7 @@ p {
 }
 .painel {
     width: 100%;
-    margin: 0px auto;
-    background-color: #F0F0F0;
     padding: 16px;
-    border-radius: 4px;
     text-align: center;
 }
 .painel input {
@@ -25,4 +22,10 @@ p {
     color: #FFF;
     border-radius: 2px;
     text-align: center;
+}
+
+.line-login {
+    background-color: #6f5499;
+    color: rgba(255,255,255,0.9);
+    margin: 40px 0px;
 }

@@ -1,33 +1,86 @@
 <template>
   <!-- HTML -->
-  <div class="container">
+  <div class="page">
 
-    <app-title title="Controle de Clientes" description="Este sistema vai permitir que você gerencie seus clientes" />
-
-
-
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-
-        <div class="painel">
-          <h2>Login</h2>
-
-          <p v-if="mensagem" class="m-error">{{mensagem}}</p>
+    <app-title title="Portal DF-e" description="Arquivo de documentos físcais eletrônicos" />
 
 
-          <form action="/login" method="POST" @submit.prevent="onSubmit">
-            
-            <div class="form-group col-md-10 col-md-offset-1">
-              <input class="form-control" type="text" placeholder="Usuário" @input="usuario = $event.target.value" required autofocus />
-            </div>
-            
-            <div class="form-group col-md-10 col-md-offset-1">
-              <input class="form-control" type="password" placeholder="Senha" @input="senha = $event.target.value" required />
-            </div>
-
-            <button class="btn btn-success" type="submit">LOGIN</button>
-          </form>
+    <div class="container-fluid text-center line-login">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Aqui você pode</h2>
         </div>
+      </div>
+
+      <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+                <h3>Arquivar NF-e e CT-e</h3>
+                <p>No portal DF-e da Viasoft você pode armazenar todas as suas NF-e e seus CT-e com segurança e comodidade.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Consultar a hora que precisar</h3>
+                <p>Sempre que precisar recuperar documentos, temos o melhor mecanismo de busca para localizar os documentos com facilidade e praticidade</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Fazer manifestação destinatário</h3>
+                <p>Precisa fazer a manifestação de destinatário? Faça pelo portal a hora que precisar.</p>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+
+          <card col="6">
+            <h2 class="text-center">Já tem um usuário</h2>
+
+            <p v-if="mensagem" class="m-error">{{mensagem}}</p>
+
+
+            <form action="/login" method="POST" @submit.prevent="onSubmit">
+
+                <ui-textbox
+                        floating-label
+                        label="Usuário"
+                        placeholder="Informe seu usuário"
+                        v-model="usuario">
+                </ui-textbox>
+
+                <ui-textbox
+                        floating-label
+                        label="Senha"
+                        placeholder="Informe sua senha"
+                        v-model="senha"
+                        type="password">
+                </ui-textbox>
+
+              <ui-button>LOGIN</ui-button>
+            </form>
+          </card>
+
+
+
+          <card col="6">
+            <h2 class="text-center" >É seu primeiro acesso?</h2>
+
+            <p v-if="mensagem" class="m-error">{{mensagem}}</p>
+
+
+            <form action="/login" method="POST" @submit.prevent="onSubmit">
+
+                <ui-textbox
+                        floating-label
+                        label="Usuário"
+                        placeholder="Informe seu usuário"
+                        v-model="usuario">
+                </ui-textbox>
+
+              <ui-button>RECEBER SENHA</ui-button>
+            </form>
+          </card>
       </div>
     </div>
 
@@ -36,10 +89,12 @@
 
 <script>
 import AppTitle from '../../shared/app-title/AppTitle.vue';
+import Card from '../../shared/card/Card.vue';
+import { UiAlert, UiButton, UiTextbox } from 'keen-ui';
 
 export default {
   components: { 
-    AppTitle
+    AppTitle, UiAlert, UiButton, UiTextbox, Card
   },
   data() {
     return {

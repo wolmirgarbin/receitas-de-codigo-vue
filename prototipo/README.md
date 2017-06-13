@@ -1,6 +1,6 @@
-# controle-clientes
+# prototipo
 
-> Controle de clientes simples
+> Este projeto visa ser um prótotipo para o novo portal DF-e
 
 ## Build Setup
 
@@ -17,6 +17,4 @@ npm run build
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-### Descrição
 
-Este projeto visa ser um prótotipo para o novo portal DF-e
