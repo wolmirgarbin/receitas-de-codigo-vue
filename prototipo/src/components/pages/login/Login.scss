@@ -1,0 +1,28 @@
+/* css com sass */
+h1 { 
+    text-align: center;
+}
+p {
+    text-align: center;
+}
+.painel {
+    width: 100%;
+    margin: 0px auto;
+    background-color: #F0F0F0;
+    padding: 16px;
+    border-radius: 4px;
+    text-align: center;
+}
+.painel input {
+    border: 1px solid #CCC;
+    border-radius: 2px;
+    padding: 5px;
+    height: 44px;
+}
+.m-error {
+    padding: 10px;
+    background: red;
+    color: #FFF;
+    border-radius: 2px;
+    text-align: center;
+}

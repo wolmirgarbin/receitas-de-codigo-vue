@@ -1,0 +1,26 @@
+Para rodar em desenvolvimento utilizar 
+$ npm run dev
+
+Para rodar o build para produção:
+$ npm run build
+
+Code split
+Utilizado para separar a aplicação em partes menores permitindo a modularização dos projetos single page
+Para utilizar no vue basta utilizar em routes.js
+
+const Cadastro = () => System.import('./components/cadastro/Cadastro.vue');
+
+Ficando assim:
+/ alurapic/src/routes.js 
+import Home from './components/home/Home.vue';
+const Cadastro = () => System.import('./components/cadastro/Cadastro.vue');
+
+export const routes = [
+    { path: '', name: 'home', component: Home, titulo: 'Home', menu: true },
+    { path: '/cadastro', name:'cadastro', component: Cadastro, titulo: 'Cadastro', menu: true },
+    { path: '/cadastro/:id', name:'altera', component: Cadastro, titulo: 'Cadastro', menu: false },
+    { path: '*', component: Home, menu: false }
+];
+
+Se rodarmos nossa aplicação com npm run dev tudo continua funcionando. Agora, quando gerarmos o build do projeto com npm run build teremos dois arquivos build gerados, ou seja, um para a nossa aplicação inteira e outro para o componente cadastro. 
+

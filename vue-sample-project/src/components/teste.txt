@@ -1,0 +1,27 @@
+Como instalar .deb no ubuntu 16.04
+
+<h2>Para quem está iniciando com ubuntu é normal ter algumas dúvidas sobre como fazer a instalação de pacotes ou aplicativos através de arquivos .deb, lendo este post você vai entender o que é e como instalar arquivos .deb no ubuntu 16.04</h2>
+
+<h2>O que é um pacote .DEB?</h2>
+
+<p>Uma das versões mais antigas e estáveis das distribuições do linux é chamada de Debian e para fazer as instalações de arquivos criaram um sistema de empacotamento de software para facilitar a instalação de programas em Sistemas Operacionais Linux, esse empacotamento ganhou o nome de <strong>deb</strong></p>
+
+<p>O Ubuntu é uma das distribuições derivadas do Debian e por isso tem suporte a este tipo de empacotamento, por isso que algumas aplicações são distribuidas com .deb</p>
+
+<h2>Como instalar os pacotes .DEB no Ubuntu ou Mint</h2>
+
+<p>Será mostrado três formas de fazer a instalação de arquivos .deb no Ubuntu, você pode optar pela que achar melhor de acordo com sua experiência em sistemas Linux.</p>
+
+<h3>Instalando arquivos .deb com linha de comando</h3>
+
+<p>A primeira maneira que vou apresentar funciona utilizando o terminal de comandos do Ubuntu. Você não precisa ter conhecimento avançado para realizar a instalação e ela se resume em 3 passos simples:</p>
+
+<p>Abra a pasta onde está o seu arquivos .deb</p>
+<p>Clique com o botão direito do mouse em uma área limpa da tela e selecione Abrir no terminal</p>
+<p>No terminal Digite o seguinte comando para dar acesso de execução para o arquivo $: sudo chmod +x <nome-do-pacote>.deb </p>
+<p>Logo em seguida utilize o comando para instalar o pacote $: sudo dpkg -i <nome-do-pacote>.deb</p>
+
+<p></p>
+
+http://www.diolinux.com.br/2012/10/tutoriais-para-inciantes-1-como.html
+
