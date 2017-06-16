@@ -21,7 +21,7 @@ import './assets/js/my.js';
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-  routes, /* : routes - como eles tem o mesmo nome podemos manter apenas 1*/
+  routes//, /* : routes - como eles tem o mesmo nome podemos manter apenas 1*/
   //mode: 'history' /* remove o # da barra de navegação */
 });
 

@@ -25,7 +25,11 @@ p {
 }
 
 .line-login {
-    background-color: #6f5499;
+    background-color: #1565c0;
     color: rgba(255,255,255,0.9);
     margin: 40px 0px;
+    padding: 40px 0px;
+}
+.line-login h2, .line-login h3 {
+    text-transform: uppercase;
 }

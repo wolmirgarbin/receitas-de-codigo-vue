@@ -35,51 +35,58 @@
       <div class="row">
 
           <card col="6">
-            <h2 class="text-center">Já tem um usuário</h2>
+              <card-header title="Já tem um usuário" description="Se você já tem um cadastro no sistema informe seu usuário e senha" />
 
-            <p v-if="mensagem" class="m-error">{{mensagem}}</p>
+              <div class="card-body">
+                  <ui-alert type="error" v-show="mensagem">
+                      {{mensagem}}
+                  </ui-alert>
 
 
-            <form action="/login" method="POST" @submit.prevent="onSubmit">
+                  <form action="/login" method="POST" @submit.prevent="onSubmit">
 
-                <ui-textbox
-                        floating-label
-                        label="Usuário"
-                        placeholder="Informe seu usuário"
-                        v-model="usuario">
-                </ui-textbox>
+                    <ui-textbox
+                            floating-label
+                            label="Usuário"
+                            placeholder="Informe seu usuário"
+                            v-model="usuario">
+                    </ui-textbox>
 
-                <ui-textbox
-                        floating-label
-                        label="Senha"
-                        placeholder="Informe sua senha"
-                        v-model="senha"
-                        type="password">
-                </ui-textbox>
+                    <ui-textbox
+                            floating-label
+                            label="Senha"
+                            placeholder="Informe sua senha"
+                            v-model="senha"
+                            type="password">
+                    </ui-textbox>
 
-              <ui-button>LOGIN</ui-button>
-            </form>
+                    <ui-button color="primary">LOGIN</ui-button>
+                  </form>
+              </div>
           </card>
 
 
 
           <card col="6">
-            <h2 class="text-center" >É seu primeiro acesso?</h2>
+              <card-header title="É seu primeiro acesse" description="Informe seu email para prosseguir com o cadastro" />
 
-            <p v-if="mensagem" class="m-error">{{mensagem}}</p>
+              <div class="card-body">
+                  <form action="/login" method="POST" @submit.prevent="onSubmitPrimeiroAcesso">
 
+                    <ui-alert type="error" v-show="mensagemPrimeiroAcesso">
+                        {{mensagemPrimeiroAcesso}}
+                    </ui-alert>
 
-            <form action="/login" method="POST" @submit.prevent="onSubmit">
+                    <ui-textbox
+                            floating-label
+                            label="Usuário"
+                            placeholder="Informe seu usuário"
+                            v-model="usuarioPrimeiroAcesso">
+                    </ui-textbox>
 
-                <ui-textbox
-                        floating-label
-                        label="Usuário"
-                        placeholder="Informe seu usuário"
-                        v-model="usuario">
-                </ui-textbox>
-
-              <ui-button>RECEBER SENHA</ui-button>
-            </form>
+                      <ui-button color="primary">RECEBER SENHA</ui-button>
+                  </form>
+              </div>
           </card>
       </div>
     </div>
@@ -90,42 +97,54 @@
 <script>
 import AppTitle from '../../shared/app-title/AppTitle.vue';
 import Card from '../../shared/card/Card.vue';
+import CardHeader from '../../shared/card/CardHeader.vue';
+
 import { UiAlert, UiButton, UiTextbox } from 'keen-ui';
 
 export default {
   components: { 
-    AppTitle, UiAlert, UiButton, UiTextbox, Card
+    AppTitle, UiAlert, UiButton, UiTextbox, Card, CardHeader
   },
   data() {
     return {
-      usuario : '',
-      senha : '',
-      mensagem: ''
+        usuarioPrimeiroAcesso : '',
+        mensagemPrimeiroAcesso: '',
+        usuario : '',
+        senha : '',
+        mensagem: ''
     }
   },
   methods : {
-    onSubmit() {
+      onSubmit() {
 
-      // TODO - verificar o usuário e senha no servidor
+          // TODO - verificar o usuário e senha no servidor
 
-      if( this.usuario == 'wolmir' && this.senha == '123' ) {
-        this.mensagem = '';
-        
-        // adiciona o usuário na sessão do navegador
-        localStorage.setItem('usuarioLogado', {'usuario': this.usuario, 'mostraMenu': true});
+          if( this.usuario == 'wolmir' && this.senha == '123' ) {
+            this.mensagem = '';
 
-        // emite um evento mostrando que o login foi realizado com sucesso!
-        this.$emit('acessouSistema');
+            // adiciona o usuário na sessão do navegador
+            localStorage.setItem('usuarioLogado', {'usuario': this.usuario, 'mostraMenu': true});
 
-        // ir para a home do sistema
-        //location.href = '/index';
-        this.$router.push('/index');
+            // emite um evento mostrando que o login foi realizado com sucesso!
+            this.$emit('acessouSistema');
 
-      } else {
-        // mostrar mensagem de usuário e senha incorretos
-        this.mensagem = 'Usuário e senha não conferem';
+            // ir para a home do sistema
+            //location.href = '/index';
+            this.$router.push('/index');
+
+          } else {
+            // mostrar mensagem de usuário e senha incorretos
+            this.mensagem = 'Usuário e senha não conferem';
+          }
+      },
+
+      onSubmitPrimeiroAcesso() {
+          if( this.usuarioPrimeiroAcesso == 'wolmir' ) {
+              this.mensagemPrimeiroAcesso = 'Enviado para seu e-mail!';
+          } else {
+              this.mensagemPrimeiroAcesso = 'Usuário não existe!';
+          }
       }
-    }
   }
 }
 </script>

@@ -16,17 +16,20 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
+                    <li>
+                        <router-link class="link-color" :to="{name:'documentos'}">Todos os documentos</router-link>
+                    </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastros <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><router-link :to="{name:'clientes'}">Clientes</router-link></li>
                             <li><router-link :to="{name:'cliente-form'}">Manutenção de Cliente</router-link></li>
-                            <li><router-link :to="{name:'mapa-marker'}">Mapa Marker</router-link></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuração <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><router-link :to="{name:'usuarios'}">Usuários</router-link></li>
                         </ul>
                     </li>
                 </ul>
@@ -65,6 +68,8 @@ export default {
     }
 }
 </script>
-<style lang="scss">
-
+<style lang="scss" scoped>
+    .link-color {
+        color: #FFF !important;
+    }
 </style>

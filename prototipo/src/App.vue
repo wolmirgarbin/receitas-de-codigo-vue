@@ -36,7 +36,7 @@ export default {
   created() {
     this.mostraMenu = localStorage.getItem('usuarioLogado') != undefined;
 
-    if( this.mostraMenu ) {
+    if( this.mostraMenu && window.location.pathname == '/' ) {
       this.$router.push('index');
     }
   }
