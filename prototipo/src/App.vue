@@ -29,15 +29,7 @@ export default {
       this.mostraMenu = false;
     },
     acessou() {
-      this.mostraMenu = true;
-    }
-  },
-
-  created() {
-    this.mostraMenu = localStorage.getItem('usuarioLogado') != undefined;
-
-    if( this.mostraMenu && window.location.pathname == '/' ) {
-      this.$router.push('index');
+      this.mostraMenu = localStorage.getItem('usuarioLogado') != undefined;
     }
   }
 }

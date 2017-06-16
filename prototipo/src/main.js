@@ -25,6 +25,23 @@ const router = new VueRouter({
   //mode: 'history' /* remove o # da barra de navegação */
 });
 
+router.beforeEach((to, from, next) => {
+    //console.log( from.path +' para '+ to.path );
+
+    if( to.path.indexOf('/admin') != -1 ) {
+
+      //console.log( 'locado: '+ (localStorage.getItem('usuarioLogado') != undefined) );
+
+        if( localStorage.getItem('usuarioLogado') != undefined ) {
+            next();
+        } else {
+            next( {path: '/'} );
+        }
+    } else {
+        next();
+    }
+});
+
 
 new Vue({
   el: '#app',

@@ -102,19 +102,26 @@ import CardHeader from '../../shared/card/CardHeader.vue';
 import { UiAlert, UiButton, UiTextbox } from 'keen-ui';
 
 export default {
-  components: { 
-    AppTitle, UiAlert, UiButton, UiTextbox, Card, CardHeader
-  },
-  data() {
-    return {
-        usuarioPrimeiroAcesso : '',
-        mensagemPrimeiroAcesso: '',
-        usuario : '',
-        senha : '',
-        mensagem: ''
-    }
-  },
-  methods : {
+    components: {
+        AppTitle, UiAlert, UiButton, UiTextbox, Card, CardHeader
+    },
+    created() {
+        console.log( localStorage.getItem('usuarioLogado') );
+
+        if( localStorage.getItem('usuarioLogado') != undefined ) {
+            this.$router.push({name: 'index'});
+        }
+    },
+    data() {
+        return {
+            usuarioPrimeiroAcesso : '',
+            mensagemPrimeiroAcesso: '',
+            usuario : '',
+            senha : '',
+            mensagem: ''
+        }
+    },
+    methods : {
       onSubmit() {
 
           // TODO - verificar o usuário e senha no servidor
@@ -130,7 +137,7 @@ export default {
 
             // ir para a home do sistema
             //location.href = '/index';
-            this.$router.push('/index');
+            this.$router.push({name: 'index'});
 
           } else {
             // mostrar mensagem de usuário e senha incorretos
@@ -145,7 +152,7 @@ export default {
               this.mensagemPrimeiroAcesso = 'Usuário não existe!';
           }
       }
-  }
+    }
 }
 </script>
 

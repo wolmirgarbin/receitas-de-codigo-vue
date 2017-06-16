@@ -16,12 +16,12 @@ const ClienteForm = () => System.import('./components/pages/cliente/ClienteForm.
 /* rotas aqui */
 export const routes = [
     {path: '', component: LoginVue, name: 'login'},
-    {path: '/index', component: IndexVue, name: 'index'},
-    {path: '/meus-dados', component: MeusDados, name: 'meus-dados'},
-    {path: '/clientes', component: ClienteList, name: 'clientes'},
-    {path: '/cliente-form', component: ClienteForm, name: 'cliente-form'},
-    {path: '/cliente-form/:id', component: ClienteForm, name: 'cliente-edit'},
-    {path: '/documentos', component: Documentos, name: 'documentos'},
-    {path: '/usuarios', component: Usuarios, name: 'usuarios'},
+    {path: '/admin/index', component: IndexVue, name: 'index'},
+    {path: '/admin/meus-dados', component: MeusDados, name: 'meus-dados'},
+    {path: '/admin/clientes', component: ClienteList, name: 'clientes'},
+    {path: '/admin/cliente-form', component: ClienteForm, name: 'cliente-form'},
+    {path: '/admin/cliente-form/:id', component: ClienteForm, name: 'cliente-edit'},
+    {path: '/admin/documentos', component: Documentos, name: 'documentos'},
+    {path: '/admin/usuarios', component: Usuarios, name: 'usuarios'},
     {path: '*', component: PageNotFound, name: 'page-not-found' }
 ];

@@ -2,7 +2,7 @@
   <!-- HTML -->
   <div>
     <div class="container-fluid">
-      <card col="4">
+      <card col="5">
           <card-header title="Últimos documentos carregados" description="Abaixo estão listados os últimos 10 documentos carregados" />
 
           <table class="table">
@@ -27,7 +27,7 @@
 
 
 
-      <card col="4">
+      <card col="5">
           <card-header title="CNPJ's base para armazenar as notas" description="Abaixo estão todos os CNPJ's que serão utilizados na importação" />
 
 
@@ -68,7 +68,7 @@
 
 
 
-      <card col="4">
+      <card col="2">
           <card-header title="Seu plano" description="Veja quanto do seu plano está utilizando aqui" />
 
           <div class="card-body">
@@ -97,13 +97,13 @@ export default {
             msgAlert2: '',
             slider3: 60,
             documentos: [
-                {nota: 'NFe-123123123123', empresa: '00011122233'},
-                {nota: 'CTe-123123123123', empresa: '00011122233'},
-                {nota: 'NFe-223123123123', empresa: '00011122233'},
-                {nota: 'CTe-223123123123', empresa: '00011122233'},
-                {nota: 'NFe-323123123123', empresa: '00011122233'},
-                {nota: 'CTe-323123123123', empresa: '00011122233'},
-                {nota: 'NFe-423123123123', empresa: '00011122233'}
+                {nota: 'NFe42140406235400000162550060001445511000422016', empresa: '45.728.963/0001-44'},
+                {nota: 'NFe42140406235400000162550060001445511000422016', empresa: '45.728.963/0001-44'},
+                {nota: 'NFe42140406235400000162550060001445511000422016', empresa: '45.728.963/0001-44'},
+                {nota: 'NFe42140406235400000162550060001445511000422016', empresa: '45.728.963/0001-44'},
+                {nota: 'NFe42140406235400000162550060001445511000422016', empresa: '45.728.963/0001-44'},
+                {nota: 'NFe42140406235400000162550060001445511000422016', empresa: '45.728.963/0001-44'},
+                {nota: 'NFe42140406235400000162550060001445511000422016', empresa: '45.728.963/0001-44'}
             ]
         }
     },

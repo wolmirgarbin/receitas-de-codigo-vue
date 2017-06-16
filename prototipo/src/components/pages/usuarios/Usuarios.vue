@@ -1,21 +1,39 @@
 <template>
   <!-- HTML -->
-  <div>
+  <div class="container-fluid">
 
-    <app-title title="Usuários" description="Configure nesta tela todos os usuários e acessos" />
+    <div class="row">
+      <card col="12">
+        <card-header title="Usuários do sistema" description="Aqui você configura todos os usuários que tem acesso aos documentos eletrônicos" />
 
+        <div class="card-body">
+
+        </div>
+      </card>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <card col="12">
+        <card-header title="Usuários x Permissão" description="Atribua ou retire permissões dos usuários cadastrados para sua empresa" />
+
+        <div class="card-body">
+
+        </div>
+      </card>
+    </div>
 
   </div>
 </template>
 
 <script>
-import AppTitle from '../../shared/app-title/AppTitle.vue';
-import Panel from '../../shared/panel/Panel.vue';
-import AppInput from '../../shared/input/Input.vue';
+import Card from '../../shared/card/Card.vue';
+import CardHeader from '../../shared/card/CardHeader.vue';
 
 export default {
     components: { 
-      AppTitle, Panel, AppInput
+      Card, CardHeader
     },
     data() {
         return {

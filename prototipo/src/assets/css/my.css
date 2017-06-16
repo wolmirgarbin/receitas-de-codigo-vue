@@ -90,6 +90,15 @@ p {
 .ui-alert__content {
     font-size: 1.4em;
 }
+.ui-select__label-text, .ui-select-option.ui-select-option--type-basic, .ui-select__display, .ui-datepicker__label-text {
+    font-size: 1em;
+}
+.ui-collapsible__header-content, .ui-datepicker__display-value {
+    font-size: 1.4em;
+}
+.ui-select:not(.is-multiple) .ui-select__display, .ui-datepicker__display {
+    height: 30px;
+}
 
 
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
