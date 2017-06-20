@@ -90,7 +90,7 @@ p {
 .ui-alert__content {
     font-size: 1.4em;
 }
-.ui-select__label-text, .ui-select-option.ui-select-option--type-basic, .ui-select__display, .ui-datepicker__label-text {
+.ui-select__label-text, .ui-select-option.ui-select-option--type-basic, .ui-select__display, .ui-datepicker__label-text, .ui-checkbox-group__label-text, .ui-checkbox__label-text {
     font-size: 1em;
 }
 .ui-collapsible__header-content, .ui-datepicker__display-value {
@@ -98,6 +98,9 @@ p {
 }
 .ui-select:not(.is-multiple) .ui-select__display, .ui-datepicker__display {
     height: 30px;
+}
+.ui-checkbox-group__checkboxes {
+    min-height: 38px;
 }
 
 

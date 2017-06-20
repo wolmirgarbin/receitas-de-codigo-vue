@@ -8,14 +8,14 @@
           <table class="table">
               <thead>
                 <tr>
-                    <th>Código</th>
-                    <th>Empresa</th>
+                    <th>Chave</th>
+                    <th>Série</th>
                 </tr>
               </thead>
               <tbody>
                 <tr v-for="item in documentos">
-                  <td>{{item.nota}}</td>
-                    <td>{{item.empresa}}</td>
+                    <td>{{item.chave}}</td>
+                    <td>{{item.serie}}</td>
                 </tr>
               </tbody>
           </table>
@@ -96,15 +96,7 @@ export default {
             showAlert2: false,
             msgAlert2: '',
             slider3: 60,
-            documentos: [
-                {nota: 'NFe42140406235400000162550060001445511000422016', empresa: '45.728.963/0001-44'},
-                {nota: 'NFe42140406235400000162550060001445511000422016', empresa: '45.728.963/0001-44'},
-                {nota: 'NFe42140406235400000162550060001445511000422016', empresa: '45.728.963/0001-44'},
-                {nota: 'NFe42140406235400000162550060001445511000422016', empresa: '45.728.963/0001-44'},
-                {nota: 'NFe42140406235400000162550060001445511000422016', empresa: '45.728.963/0001-44'},
-                {nota: 'NFe42140406235400000162550060001445511000422016', empresa: '45.728.963/0001-44'},
-                {nota: 'NFe42140406235400000162550060001445511000422016', empresa: '45.728.963/0001-44'}
-            ]
+            documentos: []
         }
     },
     methods: {
@@ -134,6 +126,11 @@ export default {
             console.log( item );
             this.itens.splice(item, 1);
         }
+    },
+    created() {
+        this.$http.get('http://localhost:28080/dfe')
+            .then(res => res.json())
+            .then(documentos => this.documentos = documentos, err => console.log(err));
     }
 }
 </script>

@@ -116,17 +116,35 @@ export default {
         return {
             usuarioPrimeiroAcesso : '',
             mensagemPrimeiroAcesso: '',
+            mensagem: '',
             usuario : '',
-            senha : '',
-            mensagem: ''
+            senha : ''
         }
     },
     methods : {
       onSubmit() {
 
-          // TODO - verificar o usuário e senha no servidor
+          this.$http.post('http://localhost:28080/login', {'username': this.usuario, 'password': this.senha })
+              .then((response) => {
 
-          if( this.usuario == 'wolmir' && this.senha == '123' ) {
+                  this.mensagem = '';
+
+                  // adiciona o usuário na sessão do navegador
+                  localStorage.setItem('usuarioLogado', {'usuario': this.usuario, 'mostraMenu': true, 'authorization' : response.body });
+                  localStorage.setItem('authorization', response.body);
+
+                  // emite um evento mostrando que o login foi realizado com sucesso!
+                  this.$emit('acessouSistema');
+
+                  // ir para a home do sistema
+                  //location.href = '/index';
+                  this.$router.push({name: 'index'});
+              }, err => {
+                  this.mensagem = 'Usuário e senha não conferem';
+              });
+
+
+         /* if( this.usuario == 'wolmir' && this.senha == '123' ) {
             this.mensagem = '';
 
             // adiciona o usuário na sessão do navegador
@@ -142,7 +160,7 @@ export default {
           } else {
             // mostrar mensagem de usuário e senha incorretos
             this.mensagem = 'Usuário e senha não conferem';
-          }
+          }*/
       },
 
       onSubmitPrimeiroAcesso() {

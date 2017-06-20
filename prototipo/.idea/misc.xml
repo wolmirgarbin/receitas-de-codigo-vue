@@ -4,9 +4,6 @@
     <option name="languageLevel" value="ES6" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_3" default="true" />
-  <component name="SvnConfiguration" myUseAcceleration="nothing">
-    <configuration useDefault="false">$USER_HOME$/.subversion</configuration>
-  </component>
   <component name="masterDetails">
     <states>
       <state key="ProjectJDKs.UI">

@@ -31,7 +31,36 @@ export default {
     acessou() {
       this.mostraMenu = localStorage.getItem('usuarioLogado') != undefined;
     }
-  }
+  },
+    created() {
+        var homer = "";
+        homer += '|                                 __\n';
+        homer += '|                       _ ,___,-\'",-=-. \n';
+        homer += '|           __,-- _ _,-\'_)_  (""`\'-._\ `. \n';
+        homer += '|        _,\'  __ |,\' ,-\' __)  ,-     /. |\n';
+        homer += '|      ,\'_,--\'   |     -\'  _)/         `|\n';
+        homer += '|    ,\',\'      ,\'       ,-\'_,`           :\n';
+        homer += '|    ,\'     ,-\'       ,(,-(              :\n';
+        homer += '|         ,\'       ,-\' ,    _            ;\n';
+        homer += "|        /        ,-._/`---'            /\n";
+        homer += "|       /        (____)(----. )       ,'\n";
+        homer += "|      /         (      `.__,     /\ /,\n";
+        homer += "|     :           ;-.___         /__\/|\n";
+        homer += "|     |         ,'      `--.      -,\ |\n";
+        homer += "|     :        /            \    .__/\n";
+        homer += "|      \      (__            \    |_\n";
+        homer += "|       \       ,`-, *       /   _|,\\\n";
+        homer += "|        \    ,'   `-.     ,'_,-'    \\\n";
+        homer += "|       (_\,-'    ,'\")--,'-'       __\\\n";
+        homer += "|        \       /  // ,'|      ,--'  `-.\n";
+        homer += "|         `-.    `-/ \'  |   _,'         `.\n";
+        homer += "\n";
+        homer += "Super Dica: Inspecionar elementos é um bom principio para aprender mais!\n";
+        homer += "\n";
+
+
+        console.log( homer );
+    }
 }
 </script>
 <style lang="scss">
