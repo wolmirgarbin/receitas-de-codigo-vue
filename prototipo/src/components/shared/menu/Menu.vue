@@ -19,13 +19,13 @@
                     <li>
                         <router-link class="link-color" :to="{name:'documentos'}">Todos os documentos</router-link>
                     </li>
-                    <li class="dropdown">
+                    <!--<li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastros <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><router-link :to="{name:'clientes'}">Clientes</router-link></li>
                             <li><router-link :to="{name:'cliente-form'}">Manutenção de Cliente</router-link></li>
                         </ul>
-                    </li>
+                    </li>-->
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Configuração <span class="caret"></span></a>
                         <ul class="dropdown-menu">
