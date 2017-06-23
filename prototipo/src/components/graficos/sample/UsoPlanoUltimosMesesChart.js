@@ -14,7 +14,7 @@ export default Line.extend({
                 },
                 {
                     label: 'Plano Contratado',
-                    backgroundColor: '#000',
+                    backgroundColor: '#999',
                     data: [3000, 3000, 3000, 3000, 3000, 3000]
                 }
             ]
